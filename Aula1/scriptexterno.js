@@ -1,7 +1,7 @@
 //alert("Hello World!");
 
 function Mensagem() {
-    alert("Hello World!");
+    alert('Hello World!');
 }
 
 function mudarCor(){

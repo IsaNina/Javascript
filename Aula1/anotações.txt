@@ -1,0 +1,5 @@
+Diferença enter declarar variaveis com let e var
+
+var é visível globalmente enquanto let é apenas visível no campo que foi inserida.
+
+é uma linguagem que lê em ordem as coisas escritas. 

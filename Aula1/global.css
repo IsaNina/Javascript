@@ -6,3 +6,8 @@
     font-family: cursive;
     font-size: normal;
 }
+
+noscript{
+    background-color: red;
+    color: white;
+}
