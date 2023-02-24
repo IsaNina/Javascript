@@ -1,0 +1,4 @@
+push adiciona no FINAL do array
+
+Função anonima --> não tem nome, pois não é necessário realizar a chamada
+porque ela vai ser o parametro (já vai ser executada)

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+<script type="text/JavaScript">
+//concatenando arrays
+var tecnico = ["LP", "BD", "DAW"];
+var medio = ["Matemática","Português", "Literatura"];
+var formacao = tecnico.concat(medio);
+
+console.log("----- Arrays concatenados--------");
+console.log(formacao);
+
+
+//gerando string com elementos de outro array
+var stringresultante = tecnico.join("-");
+console.log("string com elementos de outro array teste: " + stringresultante)
+
+
+//pegando apenas um pédaçõ do array
+var formacaoPedaco = medio.slice(1, 2); //a partir da primeira posição ele ira contar duas e pegar
+console.log("Copiando array teste: " + formacaoPedaco);
+
+
+//invertendo array
+tecnico.reverse();
+console.log("Array invertido teste: ");
+console.log(tecnico);
+
+//sort - organiza o array pelo unicode e modifica o array original.
+console.log("----Sort----");
+const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
+instrumentos.sort();
+console.log(instrumentos);
+
+const idades = [32,21,33,43,1,12,8];
+idades.sort();
+console.log(idades);
+
+//map -
+const lista = [1, 2, 3, 4, 5, 6];
+//item valor de cada posicao
+const novaLista = lista.map(function(item) {
+  return item * 5;
+})
+
+console.log("Resultado:  " +novaLista);
+
+//item = valor do item, indice = indice o array
+const novaLista2 = lista.map(function(item, index) {
+  return item + index;
+});
+console.log("Resultado Map2: " + novaLista2);
+
+//com arrow function
+const carros = ['Ford', 'Fiat', 'Honda'];
+/*
+const newCarros = carros.map(function(item){
+  returne 'Carro' + item;
+});
+*/
+const newCarros = carros.map(
+  (item)=> {
+    return 'Carro ' + item;
+  }
+);
+
+console.log(carros); //['Ford', 'Fiat', 'Honda']
+console.log(newCarros);//['Carro Ford', 'Carro Fiat', 'Carro Honda']
+
+
+</script>
+
+</head>
+<body>
+  
+</body>
+</html>
