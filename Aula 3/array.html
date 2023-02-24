@@ -36,7 +36,7 @@ const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
 instrumentos.sort();
 console.log(instrumentos);
 
-const idades = [32,21,33,43,1,12,8];
+const idades = [32, 21, 33, 43, 1, 12, 8];
 idades.sort();
 console.log(idades);
 
@@ -62,14 +62,63 @@ const newCarros = carros.map(function(item){
   returne 'Carro' + item;
 });
 */
-const newCarros = carros.map(
-  (item)=> {
+const newCarros = carros.map((item) => {
     return 'Carro ' + item;
-  }
-);
+  });
 
 console.log(carros); //['Ford', 'Fiat', 'Honda']
 console.log(newCarros);//['Carro Ford', 'Carro Fiat', 'Carro Honda']
+
+
+//reduce: tranforma em um unico valor
+
+const aulas = [10, 25, 30];
+
+const totalAulas = aulas.reduce((acumulador, atual) => {
+  return acumulador + atual;
+});
+
+console.log("Total de aulas: " + totalAulas);
+
+
+const totalAulas2 = aulas.reduce(
+  (acc, cur) => acc + cur, 100);
+console.log("Aulas totais: "+ totalAulas2)
+
+//findIndex - localiza o índice de um item na lista
+let frutas = ['Banana', 'Pêra', 'Uva', 'Maçã'];
+const buscaUva = frutas.findIndex((fruta) => {
+    return fruta === 'Uva';
+  });//2
+console.log("Posição Uva: " + buscaUva);
+
+//find - localkiza item na lista
+let numeros = [6, 43, 22, 88, 10, 29];
+let buscaMaior45 = numeros.find(x => x > 45); //88
+console.log(buscaMaior45);
+
+//includes - verifica se tem algo dentro de um array
+let nomesTeste = ['Matheus', 'Lucas', 'João'];
+console.log(nomesTeste.includes('Simone')); // retorna false
+
+if (nomesTeste.includes('Simone')) {
+  console.log("Simone está na lista!");
+} else {
+ console.log("Simone não está na lista!");
+}
+
+//some: se pelo menos um return da interação for verdadeiro, ele retorna true
+console.log(nomesTeste.some(nome => nome == 'Lucas')); //true
+
+//every: verifica se todos os itens de um array ou de um objeto atendem uma condição/valor.
+numeros = [6, 43, 22, 2, 101, 29];
+const maiorQue3 = numeros.every(x => x > 3); //false - verificar
+console.log(maiorQue3);
+
+//filter - retorna um array com a lista de valores que durante a sua interação retornaram um valor verdadeiro
+numeros = [6, 43, 22, 88, 101, 29];
+buscaMaior45 = numeros. filter (x => x > 45);
+console.log(buscaMaior45); //[88,101]
 
 
 </script>
