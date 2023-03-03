@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tratamento de datas</title>
+
+  <script type="text/Javascript">
+    var hoje = new Date();
+    console.log(hoje);
+    console.log(typeof hoje);
+
+    var dataPassada = new Date("01/22/1994 15:23:35");
+    console.log(dataPassada);
+    console.log(typeof dataPassada);
+
+    var data1 = new Date("25 jul 2017 15:29:40");
+    console.log(data1);
+    console.log(typeof data1);
+
+    //meses - jan 0 e dez 11
+    // ano, mes, dia, hora, min, seg
+    var data2 = new Date(1994, 0, 22, 15, 23, 35);
+    console.log(data2);
+    console.log(typeof data2);
+
+    //formatar data
+    var hoje2 = new Date();
+    console.log(hoje2);
+    var dia = hoje2.getDate();
+    var mes = hoje2.getMonth();
+    var ano = hoje2.getFullYear();
+    var diaSemanaNum = hoje2.getDay(); // 0 = domingo
+
+  </script>
+
+</head>
+<body>
+  
+
+</body>
+</html>
