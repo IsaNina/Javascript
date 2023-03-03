@@ -33,6 +33,45 @@
     var ano = hoje2.getFullYear();
     var diaSemanaNum = hoje2.getDay(); // 0 = domingo
 
+    // formas de mostrar pro usuario
+
+    /*if (diaSemanaNum == 0){
+      diaSemanaTexto = 'domingo';
+    } else if (diaSemanaNum == 1) {
+      diaSemanaTexto = 'segunda';
+    }*/ 
+
+    var semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"];
+    var diaSemanaTexto = semana[diaSemanaNum];
+
+    var hora = hoje2.getHours();
+    var min = hoje2.getMinutes();
+    var seg = hoje2.getSeconds();
+
+    var horaExtenso = "Hora exata: " + hora + ":" + min + ":" + seg;
+
+    console.log(` - ${hora}:${min}:${seg}`);
+
+    var dataX = new Date("10/04/2022");
+    var dataY = new Date("10/05/2022");
+
+    //if (data == data) nao funciona pq para comparar se datas são iguais é necessario utilizar milisegundos
+
+    if(+dataX === +dataY){
+      alert("Datas iguais!");
+    } else {
+      alert("Datas diferentes!");
+    }
+
+    //para comparar com > < nn precisa de milissegundos
+    if(dataX > dataY){
+      alert("A data inicial é > que a final.")
+    }
+
+    document.getElementById("data").textContent= horaExtenso;
+
+
+    
   </script>
 
 </head>
