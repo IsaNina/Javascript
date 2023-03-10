@@ -47,6 +47,17 @@
     console.log(curso.siglas);
     console.log(curso.nome);
 
+    //referencia
+    var x = curso;
+    x.sigla ='SI';
+    x.nome = 'sistema de informacao';
+    //imprime SI
+    console.log(curso.sigla);
+    console.log(x.sigla);
+    //sistema de informacao
+    console.log(curso.nome);
+    console.log(x.nome);
+
     //Spread operator(...)
 
     var pessoa = {

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objeto: removendo propriedades</title>
+
+  <script>
+
+    var curso = {
+      sigla: 'TI',
+      nome: 'tecnico em informatica'
+    };
+
+    //imprime true
+    console.log("sigla" in curso);
+
+    //imprime ti
+    console.log(curso.sigla);
+    
+    delete curso.sigla;
+
+    //imprime false
+    console.log('sigla' in curso);
+
+    //imprime undefined
+    console.log(curso.sigla);
+
+  </script>
+
+</head>
+<body>
+  <h1 style="color: red;">Objeto: removendo propriedades</h1>
+</body>
+</html>
