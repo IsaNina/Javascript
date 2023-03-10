@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desconstrução de objetos</title>
+
+  <script>
+
+    const pessoa = {
+      nome: 'Simone',
+      sobrenome: 'Silva',
+      idade: 17,
+      cargo: 'aluna'
+    };
+
+    console.log(pessoa); //imprime todo o obj
+
+    //let nome = pessoa.nome
+   // let nome = pessoa.nome;
+    let {nome} = pessoa;
+
+    console.log(nome);
+
+    //let sobrenome = pessoa.sobrenome;
+    let {sobrenome} = pessoa;
+    console.log(sobrenome);
+
+    let {idade, cargo} = pessoa;
+    console.log(idade);
+    console.log(cargo);
+
+    let {cargo:funcao} = pessoa;
+    console.log(funcao);
+
+    nome = 'Maria'; // nao altera a const
+    console.log(nome);
+    console.log(pessoa);
+  </script>
+
+</head>
+<body>
+  <h1 style="color: orange;">Desconstrução de objetos</h1>
+</body>
+</html>
