@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+
+    <script type="text/javascript">
+
+        var alunoObj ={
+            ra: 4567,
+            nome: 'Marta'
+        }
+
+        alunoObj.write();
+
+        var alunoStr = JSON.stringify(alunoObj); //converte para json
+        console.log("Obj em json: ");
+        console.log(alunoStr);
+
+        var novoAlunoObj = JSON.parse(alunoStr); // converte json para js
+        console.log("Json em js:");
+        console.log(novoAlunoObj.ra);
+        console.log(novoAlunoObj.nome);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
