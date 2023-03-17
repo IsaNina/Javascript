@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário IMC</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         function verificarImc(){
@@ -12,7 +13,13 @@
            var altura = document.getElementById("altura").value;
 
            if((peso == "") || (altura == "")){
-            alert("Campos obrigatórios!");
+            Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Campos obrigatórios!!',
+        footer: ''
+})
+            
            } else {
             imc = 0;
             imc = peso/(altura * altura);
