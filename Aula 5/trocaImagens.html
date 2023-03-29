@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>troca de imagens</title>
+
+    <script type="text/javascript">
+        function destacaTabela() {
+            var tabela = document.getElementById("tabelaGatos");
+            tabela.style.backgroundColor = "yellow";
+            tabela.style.fontSize = "20px";
+            tabela.style.transform = "rotate(30deg)";
+            tabela.style.transitionDuration = "5s";
+        }
+        function voltaTabela() {
+            var tabela = document.getElementById("tabelaGatos");
+            tabela.style.backgroundColor = "";
+            tabela.style.fontSize = "";
+            tabela.style.transform = "";
+            tabela.style.transitionDuration = "5s";
+        }
+    </script>
+
+</head>
+
+<body>
+    <img src="gato1.jpg" width="100px" id="logo" onmouseover="this.src = 'gato2.jpg';"
+        onmouseout="this.src = 'gato1.jpg';">
+
+    <hr>
+
+    <table border="1px" id="tabelaGatos" onmouseover="destacaTabela()" ; onmouseout="voltaTabela()" ;>
+
+        <tr>
+            <th>Raça</th>
+            <th>Nome</th>
+        </tr>
+        <tr>
+            <td>Bola de pelo</td>
+            <td>Cris</td>
+        </tr>
+        <tr>
+            <td>Amarelinho</td>
+            <td>Tadeu</td>
+        </tr>
+        <tr>
+            <td>Cara de bolacha</td>
+            <td>Steve</td>
+        </tr>
+</body>
+
+</html>
