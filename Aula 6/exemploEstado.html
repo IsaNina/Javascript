@@ -22,63 +22,24 @@
                 limpaCombo();
             }
 
-            /*if (estado == "SP") {
-                limpaCombo();
-
-                option = document.createElement("option");
-
-                option.value = "1";
-                option.text = "Limeira";
-                cidade.add(option);
-
-                option = document.createElement("option");
-                option.value = "2";
-                option.text = "Campinas";
-                cidade.add(option);
-
-
-                option = document.createElement("option");
-                option.value = "3";
-                option.text = "Valinhos";
-                cidade.add(option);
-            }*/
-
-            //outra opção para o mesmo codigo
-
-
             if (estado == "SP") {
                 limpaCombo();
-
-                for (var i = 0; i < cidadesSP.lenght; i++) {
-                    option = document.createElement("option");
-                    option.value = i;
-                    option.text = cidadesSP[i];
-                    cidade.add(option);
-                }
+                alimentaCombo(cidadesSP);
             }
+
 
             if (estado == "MG") {
                 limpaCombo();
-
-                for (var i = 0; i < cidadesMG.lenght; i++) {
-                    option = document.createElement("option");
-                    option.value = i;
-                    option.text = cidadesMG[i];
-                    cidade.add(option);
-                }
+                alimentaCombo(cidadesMG);
             }
+
 
             if (estado == "RJ") {
                 limpaCombo();
-
-                for (var i = 0; i < cidadesRJ.lenght; i++) {
-                    option = document.createElement("option");
-                    option.value = i;
-                    option.text = cidadesRJ[i];
-                    cidade.add(option);
-                }
+                alimentaCombo(cidadesRJ);
             }
         }
+
 
         function limpaCombo() {
             var comboCidades = document.getElementById("cidade");
@@ -88,6 +49,14 @@
             }
         }
 
+        function alimentaCombo(cidades) {
+            for (var i = 0; i < cidades.lenght; i++) {
+                option = document.createElement("option");
+                option.value = i;
+                option.text = cidades[i];
+                cidade.add(option);
+            }
+        }
     </script>
 
 </head>
