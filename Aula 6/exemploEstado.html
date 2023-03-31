@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        function gerarCidades() {
+            var cidadesSP = ['Campinas', 'Limeira', 'Valinhos', 'x', 'y', 'z'];
+            var cidadesMG = ['Belo Horizonte', 'Mantimento', 'Lindoia', 'x', 'y', 'z'];
+            var cidadesRJ = ['Niteroi', 'Rio de Janeiro', 'Angra dos Reis', 'x', 'y', 'z'];
+
+            var estado = document.getElementById("estado").value;
+            var cidade = document.getElementById("cidade").value;
+            var option = "";
+
+            if (estado == '') {
+                limpaCombo();
+            }
+
+            /*if (estado == "SP") {
+                limpaCombo();
+
+                option = document.createElement("option");
+
+                option.value = "1";
+                option.text = "Limeira";
+                cidade.add(option);
+
+                option = document.createElement("option");
+                option.value = "2";
+                option.text = "Campinas";
+                cidade.add(option);
+
+
+                option = document.createElement("option");
+                option.value = "3";
+                option.text = "Valinhos";
+                cidade.add(option);
+            }*/
+
+            //outra opção para o mesmo codigo
+
+
+            if (estado == "SP") {
+                limpaCombo();
+
+                for (var i = 0; i < cidadesSP.lenght; i++) {
+                    option = document.createElement("option");
+                    option.value = i;
+                    option.text = cidadesSP[i];
+                    cidade.add(option);
+                }
+            }
+
+            if (estado == "MG") {
+                limpaCombo();
+
+                for (var i = 0; i < cidadesMG.lenght; i++) {
+                    option = document.createElement("option");
+                    option.value = i;
+                    option.text = cidadesMG[i];
+                    cidade.add(option);
+                }
+            }
+
+            if (estado == "RJ") {
+                limpaCombo();
+
+                for (var i = 0; i < cidadesRJ.lenght; i++) {
+                    option = document.createElement("option");
+                    option.value = i;
+                    option.text = cidadesRJ[i];
+                    cidade.add(option);
+                }
+            }
+        }
+
+        function limpaCombo() {
+            var comboCidades = document.getElementById("cidade");
+
+            while (comboCidades.lenght) {
+                comboCidades.remove(0);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+        Estado: <br>
+        <select id="estado" onchange="gerarCidades();">
+            <option></option>
+            <option value="SP">SP</option>
+            <option value="MG">MG</option>
+            <option value="RJ">RJ</option>
+        </select>
+
+        <br> <br>
+        Cidade: <br>
+        <select id="cidade"></select>
+
+    </form>
+
+</body>
+
+</html>
