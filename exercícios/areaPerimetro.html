@@ -8,29 +8,25 @@
     <title>Area e Perimetro</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-
-
         function calcularArea() {
-            var raio = document.getElementById("raio").value;
+            let raio = document.getElementById("raio").value;
 
             if (raio.trim() == "") {
                 alert("informe o raio");
             } else {
-                area = 0;
-                area = 3.14 * (raio * raio);
+                let area = Math.PI * (raio * raio);
                 document.getElementById("msg").value = area;
             }
 
         }
 
         function calcularPerimetro() {
-            var raio = document.getElementById("raio").value;
+            let raio = document.getElementById("raio").value;
 
             if (raio == "") {
                 alert("CAMPO VAZIO");
             } else {
-                p = 0;
-                p = 3.14 * 2 * raio;
+                let p = Math.PI * 2 * raio;
                 document.getElementById("pResultado").textContent = p;
             }
         }
