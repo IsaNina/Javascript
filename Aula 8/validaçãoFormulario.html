@@ -5,10 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
+
+    <script>
+        function configPagina() {
+            verificaTipo();
+            /*document.getElementById("cpf").style.display = "inline";
+            document.getElementById("cnpj").style.display = "none";*/
+        }
+
+        function verificaTipo(tipo) {
+            if (tipo == "PF") {
+                document.getElementById("cpf").style.display = "inline";
+                document.getElementById("cnpj").style.display = "none";
+            } else if (tipo == "PJ") {
+                document.getElementById("cpf").style.display = "none";
+                document.getElementById("cnpj").style.display = "inline";
+            }
+        }
+
+
+    </script>
+
 </head>
 
-<body>
+<body onload="configPagina();">
+    <h1>Faça seu cadastro</h1>
+    <div id="msg"></div>
+    <form action="" method="post" name="dados" id="dados" onsubmit="return enviardados();">
+
+        Pessoa fisica:
+        <input type="radio" name="tipo" id="PF" value="PF" onclick="verificaTipo(this.value);" checked>
+
+        Pessoa juridica
+        <input type="radio" name="tipo" id="PJ" value="PJ" onclick="verificaTipo(this.value);">
+
+        <br>
+
+        <div id="cpf">
+            <br>
+            CPF: <br>
+            <input type="text" name="txt_cpf" id="txt_cpf" size="20" maxlength="14">
+            <br><br>
+            Nome completo: <br>
+            <input type="text" name="txt_nome" id="txt_nome">
+        </div>
+
+        <div id="cnpj">
+            <br>
+            CNPJ: <br>
+            <input type="text" name="txt_cnpj" id="txt_cnpj" size="20" maxlength="18">
+            <br><br>
+            Razão Social: <br>
+            <input type="text" name="txt_rz" id="txt_rz">
+        </div>
+
+        <br><br>
+
+        email: <br>
+        <input type="text" name="txt_email" id="txt_email">
+
+        <br><br>
+        Mensagem: <br>
+        <textarea name="txt_mensagem" id="txt_mensagem" cols="30" rows="10"></textarea>
+
+        <br><br>
+        <input type="submit" name="submit" value="Enviar">
+
+        <input type="reset" name="reset" value="Redefinir">
+    </form>
 
 </body>
 
